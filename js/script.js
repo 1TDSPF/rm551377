@@ -28,9 +28,27 @@
     //Adicionando um atributo ao elemeno button
     //this.setAttribute("nome do atributo" , "valor do atributo");
     this.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
+            //contenação e interpolação
 
 } );
 
 //DESAFIO
 //Recupere o elemento tit-sec e atrele a ele um evento de mmouse a sua escolha.
 // Altere a cor de fundo e a cor do texto quando o evento ocorer.
+
+const tit  = document.getElementById("tit-2");
+//const tit = document.querySelector(".tit-sec");  -  pegar pela classe - mas so pega o 1 elemento
+// no lugar do .tit.-sec vc pode colocar qualquer objeto como só h2
+console.log(tit.textContent);
+
+tit.addEventListener("click" , function(){
+
+    let l,g,b;
+
+    r = Math.round(Math.random() *255);
+    g = Math.round(Math.random() *255);
+    b = Math.round(Math.random() *255);
+
+    this.setAttribute("style", `background-color:rgb(${r},${g},${b});color:#fff;`);
+
+} );
